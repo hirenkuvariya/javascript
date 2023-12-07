@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+</head>
+<body>
+    <form>
+        
+        enter name:<input type="text" id="b"/>
+        enter age : <input type="number" id="a" /><br><br>
+                   <input type="button" onClick="myfunction()" Value="submit" />
+        </form>
+
+        <span id ="abc"></span> <br>
+
+        <span id = "xyz"></span>
+        </p>
+        
+</body>
+<script>
+    function myfunction()
+
+     {
+       num2=document.getElementById("b").value
+       document.getElementById("abc").innerHTML=num2;
+
+       num1 = document.getElementById("a").value;
+       if(num1>18 && num1<=50 ){
+        document.getElementById('xyz').innerHTML= "yor are eligible";
+       }
+       else
+       {
+        document.getElementById('xyz').innerHTML="you are not eligible";
+       }
+     }
+
+</script>
+</html>
