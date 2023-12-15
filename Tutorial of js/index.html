@@ -20,13 +20,323 @@
 </head>
 
 <body>
-      <h1 id="name">hiren</h1>
+      <!-- <h1 id="name">hiren</h1>
       <h2 id="no">7228806685</h2>
     <script>
         let text = "hiren";
         document.getElementById("no").innerHTML = text.length;
     
     
+    </script> -->
+    <!-- 
+<h1>JavaScript String Methods</h1>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("visit","W3Schools");
+}
+</script> -->
+
+
+
+<h1>JavaScript Strings</h1>
+<!-- <h2>The trim() Method</h2> -->
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<!-- <script>
+let text1 = " Hello World!"; 
+let text2 = text1.trim();
+
+document.getElementById("demo").innerHTML =
+"Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+</script> -->
+<!-- 
+<script>
+    let text1 = "     Hello World!     ";
+    let text2 = text1.trimStart();
+    
+    document.getElementById("demo").innerHTML =
+    "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+    </script> -->
+
+<!-- <script>
+    let text = "5";
+    text = text.padEnd(4,"0");
+    
+    document.getElementById("demo").innerHTML = text;
+    </script> -->
+
+    <!-- <script>
+      var text = "hiren";
+      document.getElementById("demo").innerHTML = text.charAt(0);  
+    </script> -->
+
+    <!-- <script>
+        var fruit = ['apple','banna','painale','greph'];
+        document.getElementById('demo').innerHTML= fruit;
     </script>
+     -->
+    <!-- <script>
+      var car =['bmw','maruti' ,'hyundai'];
+      let size = car.length;
+      
+      let text="<ul>";
+        for(i= 0; i < size ; i++){
+              text +=  "<li>" + car[i] + "</li>";
+        }
+        text += "<ul/>";
+
+
+      document.getElementById('demo').innerHTML= text;
+    </script>
+     -->
+     
+     <!-- <script>
+      const point = [20,88,88,4441,888,7];
+      document.getElementById("demo").innerHTML=point
+      // document.getElementById("demo").innerHTML=typeof point;
+      // document.getElementById("demo").innerHTML= point instanceof Array;
+
+
+      point.pop();
+      document.getElementById("demo2").innerHTML=point;
+     
+       point.shift();
+       document.getElementById("demo2").innerHTML=point;
+
+
+       point.unshift("555");
+       document.getElementById("demo2").innerHTML=point;
+
+       point[0]="111";
+       document.getElementById("demo2").innerHTML=point;
+      
+
+     </script> -->
+
+
+
+     <!-- <script>
+     const girl = ["sita","meeta","geeta","riya"];
+     const boy = ["ram","laxman","mit","dhruv"];
+     const sallary = [10000,22225,55505,05512];
+    //  const childern= girl.concat(boy,sallary);
+    //   document.getElementById("demo").innerHTML=childern;
+     const chil= girl.slice(2);  
+     document.getElementById("demo2").innerHTML=chil;
+     </script> -->
+    
+    <!-- <script>
+      const a=["a","b","c","d"];
+      a.reverse();
+      document.getElementById("demo").innerHTML=a;
+
+      a.sort();
+      document.getElementById("demo2").innerHTML=a;
+
+
+      </script> -->
+
+      <!-- <script>
+        const d= new Date("2024-10-22");
+        document.getElementById("demo").innerHTML=d.getFullYear();
+      </script> -->
+
+
+      <!-- <script>
+        document.getElementById("demo").innerHTML=Math.floor(Math.random()*10);
+
+      </script> -->
+     
+       <!-- <script>
+        const time = new Date().getHours();
+        let a;
+        if (time < 10){
+          a="morning";
+        } 
+         else if (time < 20);{
+         a="day";
+         }
+        
+        document.getElementById("demo").innerHTML= a ;
+      </script>  -->
+
+      <!-- <script>
+        var day;
+        switch (new Date().getDay()){
+          case 0:
+            day="sunday";
+            break;
+
+          case 1:
+            day="monday";
+            break;
+           
+          case 2:
+            day="tuesday";
+            break;
+          
+          case 3:
+            day ="wednesday";
+            break;
+
+          case 4:
+            day = "thursday";
+            break;
+          
+          case 5:
+            day ="friday";
+            break;
+
+          case 6:
+            day ='saturday';
+            break;
+        
+        }
+        document.getElementById("demo").innerHTML=day;
+      </script> -->
+
+
+      <!-- <script>
+        let x = "0";
+        
+        switch (x) {
+          case 0:
+            text = "20";
+            break;
+          case 1:
+            text = "30";
+            break;
+          default:
+            text = "No value found";
+        }
+        document.getElementById("demo").innerHTML = text;
+        </script> -->
+        
+
+
+
+        <!-- <script>
+          let text ="";
+          for (let i = 0; i < 10; i++)  {
+            if (i === 3) { break; }
+            text += "The number is " + i + "<br>";
+          }
+        </script> -->
+<!-- <script>
+  const fruits = new Map()
+     fruits.set('banana',500);
+     fruits.set('apple',200);
+     fruits.set('mango',800);
+
+     fruits.delete('banana');
+     document.getElementById('demo').innerHTML =fruits.size;
+    //  document.getElementById("demo").innerHTML = fruits.get('banana');
+
+
+
+
+
+
+  //   ["apples",500],
+  //   ["bananas",300],
+  //   ["oranges",200]
+  // ]);
+  // document.getElementById("demo").innerHTML=fruits.get("banana");
+</script> -->
+ <script>
+  // //  let person = ['hiren','kuvariya','junagadh',24]
+  // let person = {
+  //   firstname : "hiren",
+  //   lastname : "kuvariya",
+  //   city : "junagadh",
+  //   age : 23,
+  //   hobbis : ['cricket','driving'],
+  //   car : {
+  //     car1: "bmw",
+  //     car2: "hyundai",
+  //     car3: "maruti" 
+  //   },
+  //   fullName : function() {
+  //   return this.firstname + " " + this.lastname
+  // }
+  // }
+  // person.age = 55 ; 
+  // person.email="hiren@gmail.com";
+  // delete person.city;
+  // console.log(person.fullName());
+  // //  console.log('city' in person);
+  // //  for (let key in person){
+  // //   console.log(key + ":-" + person[key]);
+  // //  }
+  result  = [
+  {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Reema",
+        lastname: "Maheta",
+        emailId: "reemamaheta@google.com",
+        birthdate: 29 - 02 - 2002,
+        image: "",
+        subjects: {
+            mathematics: 68,
+            science: 84,
+            gujarati: 95,
+            socialscience: 76,
+            english: 85
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Maya",
+        lastname: "Thakur",
+        emailId: "mayathakur@google.com",
+        birthdate: 30 - 02 - 2002,
+        image: "",
+        subjects: {
+            mathematics: 62,
+            science: 84,
+            gujarati: 65,
+            socialscience: 74,
+            english: 95
+        }
+    },
+    {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Malhar",
+        lastname: "Vyas",
+        emailId: "malharvyas@google.com",
+        birthdate: 28 - 02 - 2002,
+        image: "",
+        subjects: {
+            mathematics: 61,
+            science: 95,
+            gujarati: 54,
+            socialscience: 55,
+            english: 84
+        }
+    }
+]
+
+document.getElementById('demo').innerHTML= JSON.stringify(result);
+
+//  const outputElement = document.getElementById('demo');
+
+//  result.forEach((obj, index) => {
+//   const a = document.createElement('p');
+
+//   a.textContent = `Object ${index + 1}: ${JSON.stringify(obj)}`;
+//   outputElement.appendChild(a);
+// });
+
+
+ </script>
 </body>
 </html>
