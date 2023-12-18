@@ -72,6 +72,11 @@
     <h3>16.show employee project</h3>
     <p id="p16"></p>
 
+    <h3>17.total dapartment total sallary</h3>
+    <p id="p17"></p>
+
+    <h3></h3>
+    <p id="p18"></p>
     <script>
 
         company = [{
@@ -91,10 +96,31 @@
                         },
                         {
                             id: 102,
-                            name: "Jane Smith",
+                            name: "vijay sharma",
+                            position: "web developer",
+                            salary: 25000,
+                            projects: ["varna", "creata",]
+                        },
+                        {
+                            id: 103,
+                            name: "ram vyas",
+                            position: "leb tech",
+                            salary: 140000,
+                            projects: ["tata tech", "reli-power"]
+                        },
+                        {
+                            id: 104,
+                            name: "mit Smith",
                             position: "Data Scientist",
                             salary: 120000,
                             projects: ["ecormarce", "app develeop"]
+                        },
+                        {
+                            id: 105,
+                            name: "John Doe",
+                            position: "Software Engineer",
+                            salary: 100000,
+                            projects: ["adani", "management","product-management"]
                         }
                     ]
                 },
@@ -104,17 +130,116 @@
                     employees: [
                         {
                             id: 201,
+                            name: "jay parmar",
+                            position: "Marketing product",
+                            salary: 90000,
+                            projects: ["mirecal", "tely"]
+                        },
+                        {
+                            id: 202,
+                            name: "vikratn kuvariya",
+                            position: "network Marketing",
+                            salary: 90000,
+                            projects: ["person", "data record"]
+                        },
+                        {
+                            id: 203,
                             name: "Bob Johnson",
                             position: "Marketing Manager",
                             salary: 90000,
                             projects: ["tata", "rec"]
                         },
                         {
-                            id: 202,
-                            name: "Alice Brown",
+                            id: 204,
+                            name: "bobi deol",
+                            position: "casiar",
+                            salary: 90000,
+                            projects: ["counter"]
+                        },
+                        {
+                            id: 205,
+                            name: "vita Brown",
                             position: "Content Writer",
                             salary: 80000,
                             projects: ["nokia"]
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    name: "management",
+                    employees: [
+                        {
+                            id: 301,
+                            name: "dixt tank",
+                            position: "stock management",
+                            salary: 19000
+                        },
+                        {
+                            id: 302,
+                            name: "munmun data",
+                            position: "stock management",
+                            salary: 26000,
+                            projects: "record"
+                        },
+                        {
+                            id: 303,
+                            name: "rohit parekh",
+                            position: "management",
+                            salary: 55000,
+                            projects: ["tata", "rec"]
+                        },
+                        {
+                            id: 304,
+                            name: "keyur vadhiya",
+                            position: "clark",
+                            salary: 60000,
+                            projects: ["leaber management"]
+                        },
+                        {
+                            id: 305,
+                            name: "uk Brown",
+                            position: "management",
+                            salary: 40000,
+                            projects: ["spech management"]
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    name: "players",
+                    employees: [
+                        {
+                            id: 301,
+                            name: "rohit sharma",
+                            position: "caption",
+                            salary: 90000
+                        },
+                        {
+                            id: 302,
+                            name: "virat kohli",
+                            position: "batter",
+                            salary: 80000
+                        },
+                        {
+                            id: 303,
+                            name: "raviundra jadeja",
+                            position: "allrounder",
+                            salary: 75000
+                            
+                        },
+                        {
+                            id: 304,
+                            name: "kl rahul",
+                            position: "batter",
+                            salary: 60000,
+                           
+                        },
+                        {
+                            id: 305,
+                            name: "hardik pandya",
+                            position: "bowler",
+                            salary: 40000,
                         }
                     ]
                 }
@@ -253,26 +378,34 @@
         console.log("total employ project ", totalpro);
         document.getElementById('p16').innerHTML = totalpro;
 
+         
+        //total empoy selary
+        const totalSalary = company[0].departments.reduce(
+            (acc, department) =>
+             {
+                                   const departmentTotal = department.employees.reduce((acc, employee) => { return acc + employee.salary; }, 0);
+                 return acc + departmentTotal;
+             }, 0);
 
-
-        // Extracting employee data
-        var employeeData = company[0].departments.flatMap(department =>
-            department.employees.map(employee => ({
-                id: employee.id,
-                name: employee.name,
-                position: employee.position,
-                salary: employee.salary,
-                projects: employee.projects.join(", ")
-            }))
-        );
-
-        // Displaying employee data in a table
-        document.write("<h2>Employee Records</h2>");
-        document.write("<table>");
-        document.write("<tr> <th>ID</th> <th>Name</th> <th>Position</th> <th>Salary</th> <th>Projects</th> </tr>");
-
+            console.log("Total Salary of all employees:" + totalSalary);
+            document.getElementById("p17").innerHTML=totalSalary
        
-        document.write("</table>");
+
+
+        //show the total empoly salray maximum 100000
+         const filteredEmployees = company[0].departments.flatMap(department => department.employees)
+        .filter(employee => employee.salary <= 100000);
+         console.log('cfsdsssf',filteredEmployees)
+        //  document.write(filteredEmployees)
+     
+        //show the data in salary in 
+        var empmax0 = company[0].departments[0].employees.filter(
+            function (p0){
+                return p0.salary>=100000;
+            }
+         )
+         console.log("maxmam",empmax0);
+    
     </script>
 </body>
 
