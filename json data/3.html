@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+ var details={
+    PONumber             : 1600,
+    Reference            : "mit-20140421",
+    Requestor            : "Alexis Bull",
+    User                 : "mit",
+    CostCenter           : "A50",
+
+    ShippingInstructions : { name   : "Alexis Bull",
+
+                             Address: { street  : "200 Sporting Green",
+                                          city    : "South San Francisco",
+                                          state   : "CA",
+                                          zipCode : 99236,
+                                          country : "United States of America" },
+
+                             Phone : [ { type   : "Office", 
+                                           number : "909-555-7307" },
+
+                                         { type   : "Mobile",
+                                           number : "415-555-1234" } 
+                                      ] },
+
+  SpecialInstructions : null,
+  AllowPartialShipment : false,
+
+  LineItems            :[ { ItemNumber : 1,
+                               Part       : { Description : "One Magic Christmas",
+                                                UnitPrice   : 19.95,
+                                                UPCCode     : 13131092899 },
+
+                               Quantity   : 9.0 
+                            },
+
+                             { ItemNumber : 2,
+                               Part       : { Description : "Lethal Weapon",
+                                                UnitPrice   : 19.95,
+                                                UPCCode     : 85391628927 },
+
+                               Quantity   : 5.0 
+                            }
+                          ]
+}
+
+// //show detail
+// document.write("PONumber : ",details.PONumber,"<hr>",
+//                "<br>","Reference : ", details.Reference,"<hr>",
+//                "<br>","Requestor : ", details.Requestor,"<hr>",
+//                "<br>","User : ", details.User,"<hr>",
+//                "<br>","CostCenter : ", details.CostCenter,"<hr>",
+//                "<br>","SpecialInstructions : ", details.SpecialInstructions,"<hr>",
+//                "<br>","AllowPartialShipment : ", details.AllowPartialShipment,"<hr>",
+//                "<br>","ShippingInstructions : name - ", details.ShippingInstructions.name,
+//                "<br>","ShippingInstructions : address - ", details.ShippingInstructions.Address.city,
+//                "<br>","address : state - ", details.ShippingInstructions.Address.state,
+//                "<br>"," zipCode - ", details.ShippingInstructions.Address.zipCode,
+//                "<br>"," country - ", details.ShippingInstructions.Address.country,"<hr>",
+//                "<br>","Phone : type - ", details.ShippingInstructions.Phone[0].type,
+//                "<br>","Phone : number - ", details.ShippingInstructions.Phone[0].number,
+//                "<br>","Phone : type - ", details.ShippingInstructions.Phone[1].type,
+//                "<br>","Phone : number - ", details.ShippingInstructions.Phone[1].number,"<hr>"
+//                )
+// // var a = details.LineItems.map(
+// //     function (b){
+// //         return b.Quantity
+// //     }
+// // )
+// // console.log("quantity",a)
+// // document.write(" ",a)
+
+
+// // var c =details.LineItems.Part.filter(
+// //     function (d)
+// //     {
+// //         return d.UnitPrice+10;
+// //     }
+// // )
+// // console.log(c)
+
+// for(x in details.PONumber){
+//     console.log(x+":"+details.PONumber)
+// }
+
+for (let i = 0; i < details.LineItems.length; i++) {
+    const item = details.LineItems[i];
+   
+    // Display information for each item
+    console.log("Item",item.ItemNumber);
+    console.log("Description", item.Part.Description);
+    console.log(" Unit Price:", item.Part.UnitPrice.toFixed(2));
+    console.log( "UPC Code:", item.Part.UPCCode);
+    console.log(  "Quantity", item.Quantity);
+    console.log(); // Add a newline for better readability
+}
+for (let j = 0; j > details.ShippingInstructions.name; j++) {
+    const item1 = details.ShippingInstructions[j];
+   console.log("sho)
+}
+
+
+    </script>
+</body>
+</html>

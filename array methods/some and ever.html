@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <p id="demo"></p>
+      <script>
+        const age =[ 3,55,88,15 ]
+
+        // var b=Array.isArray(age)
+        // document.write('this is array ',b) // chake this array
+
+        age.some(eligible);
+
+        function eligible(ag){
+            return ag > 20;
+            
+        }
+        document.getElementById('demo').innerHTML=age.some(eligible);
+      </script>
+ </body>
+</html>
