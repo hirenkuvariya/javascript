@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript HTML DOM</h2>
+
+    <form>
+        <textarea name="text-example-one" id="tid1" cols="50" rows="10">
+        This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui. 
+    </textarea>
+        <textarea name="text-example-two" id="tid2" cols="50" rows="10">
+        This is Text Area One. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui. 
+    </textarea>
+
+        <p> active element Id: <em id="eid1"></em></p>
+        <p>selected text : <em id="eid2"></em></p>
+    </form>
+    <script>
+        function onMouseUp(e) {
+            const activeTextarea = document.activeElement;
+            const selection = activeTextarea.value.substring(
+                activeTextarea.selectionStart,
+                activeTextarea.selectionEnd,
+            );
+            const outputElement = document.getElementById("eid1");
+            const outputText = document.getElementById("eid2");
+            outputElement.innerHTML = activeTextarea.id;
+            outputText.innerHTML = selection;
+        }
+        const textarea1 = document.getElementById("tid1");
+        const textarea2 = document.getElementById("tid2");
+        textarea1.addEventListener("mouseup", onMouseUp, false);
+        textarea2.addEventListener("mouseup", onMouseUp, false);
+    </script>
+</body>
+
+</html>

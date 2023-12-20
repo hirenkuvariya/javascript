@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #564343;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #262424;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>1. find a complany name </h3>
+    <p id="p1"></p>
+
+    <h3>2. find a complany location </h3>
+    <p id="p2"></p>
+
+    <h3>2. find a total departments name</h3>
+    <p id="p3"></p>
+
+    <h3>4. find a total departments id number</h3>
+    <p id="p4"></p>
+
+    <h3>5. find a Engineering employ names</h3>
+    <p id="p5"></p>
+
+    <h3>6. find a Engineering employ total position</h3>
+    <p id="p6"></p>
+
+    <h3>7. find a Engineering employ total id's </h3>
+    <p id="p7"></p>
+
+    <h3>8. find a Engineering employ salary </h3>
+    <p id="p8"></p>
+
+    <h3>9.find a Engineering employ project</h3>
+    <p id="p9"></p>
+
+    <h3>10.find a complany departments of Marketing its name and id</h3>
+    <p id="p10"></p>
+
+    <h3>11.find a the total of salary of department of Engineering </h3>
+    <p id="p11"></p>
+
+    <h3>12.find a the total of salary of department of Marketing </h3>
+    <p id="p12"></p>
+
+    <h3>13.increment Marketing department employ salary in 10000</h3>
+    <p id="p13"></p>
+
+    <h3>14.show number of employee IDs</h3>
+    <p id="p14"></p>
+
+    <h3>15.show employee name</h3>
+    <p id="p15"></p>
+
+    <h3>16.show employee project</h3>
+    <p id="p16"></p>
+
+    <h3>17.total dapartment total sallary</h3>
+    <p id="p17"></p>
+
+    <h3></h3>
+    <p id="p18"></p>
+    <script>
+
+        company = [{
+            name: "TechCorp",
+            location: "Silicon Valley",
+            departments: [
+                {
+                    id: 1,
+                    name: "Engineering",
+                    employees: [
+                        {
+                            id: 101,
+                            name: "John Doe",
+                            position: "Software Engineer",
+                            salary: 100000,
+                            projects: ["hyundai", "stock"]
+                        },
+                        {
+                            id: 102,
+                            name: "vijay sharma",
+                            position: "web developer",
+                            salary: 25000,
+                            projects: ["varna", "creata",]
+                        },
+                        {
+                            id: 103,
+                            name: "ram vyas",
+                            position: "leb tech",
+                            salary: 140000,
+                            projects: ["tata tech", "reli-power"]
+                        },
+                        {
+                            id: 104,
+                            name: "mit Smith",
+                            position: "Data Scientist",
+                            salary: 120000,
+                            projects: ["ecormarce", "app develeop"]
+                        },
+                        {
+                            id: 105,
+                            name: "John Doe",
+                            position: "Software Engineer",
+                            salary: 100000,
+                            projects: ["adani", "management","product-management"]
+                        }
+                    ]
+                },
+                {
+                    id: 2,
+                    name: "Marketing",
+                    employees: [
+                        {
+                            id: 201,
+                            name: "jay parmar",
+                            position: "Marketing product",
+                            salary: 90000,
+                            projects: ["mirecal", "tely"]
+                        },
+                        {
+                            id: 202,
+                            name: "vikratn kuvariya",
+                            position: "network Marketing",
+                            salary: 90000,
+                            projects: ["person", "data record"]
+                        },
+                        {
+                            id: 203,
+                            name: "Bob Johnson",
+                            position: "Marketing Manager",
+                            salary: 90000,
+                            projects: ["tata", "rec"]
+                        },
+                        {
+                            id: 204,
+                            name: "bobi deol",
+                            position: "casiar",
+                            salary: 90000,
+                            projects: ["counter"]
+                        },
+                        {
+                            id: 205,
+                            name: "vita Brown",
+                            position: "Content Writer",
+                            salary: 80000,
+                            projects: ["nokia"]
+                        }
+                    ]
+                },
+                {
+                    id: 3,
+                    name: "management",
+                    employees: [
+                        {
+                            id: 301,
+                            name: "dixt tank",
+                            position: "stock management",
+                            salary: 19000
+                        },
+                        {
+                            id: 302,
+                            name: "munmun data",
+                            position: "stock management",
+                            salary: 26000,
+                            projects: "record"
+                        },
+                        {
+                            id: 303,
+                            name: "rohit parekh",
+                            position: "management",
+                            salary: 55000,
+                            projects: ["tata", "rec"]
+                        },
+                        {
+                            id: 304,
+                            name: "keyur vadhiya",
+                            position: "clark",
+                            salary: 60000,
+                            projects: ["leaber management"]
+                        },
+                        {
+                            id: 305,
+                            name: "uk Brown",
+                            position: "management",
+                            salary: 40000,
+                            projects: ["spech management"]
+                        }
+                    ]
+                },
+                {
+                    id: 4,
+                    name: "players",
+                    employees: [
+                        {
+                            id: 301,
+                            name: "rohit sharma",
+                            position: "caption",
+                            salary: 90000
+                        },
+                        {
+                            id: 302,
+                            name: "virat kohli",
+                            position: "batter",
+                            salary: 80000
+                        },
+                        {
+                            id: 303,
+                            name: "raviundra jadeja",
+                            position: "allrounder",
+                            salary: 75000
+                            
+                        },
+                        {
+                            id: 304,
+                            name: "kl rahul",
+                            position: "batter",
+                            salary: 60000,
+                           
+                        },
+                        {
+                            id: 305,
+                            name: "hardik pandya",
+                            position: "bowler",
+                            salary: 40000,
+                        }
+                    ]
+                }
+            ]
+        }
+        ]
+        console.log(company[0]);//all data show
+
+        //find a complany name
+        console.log(company[0].name);
+        document.getElementById("p1").innerHTML = company[0].name;
+
+        //find a complany location
+        console.log(company[0].location);
+        document.getElementById('p2').innerHTML = company[0].location;
+
+        // Displaying department names
+        var departmentNames = company[0].departments.map(
+            function (a) {
+                return a.name;
+            });
+        console.log("Department Names:", departmentNames);
+        document.getElementById("p3").innerHTML = "<br>" + departmentNames
+
+        // Displaying department id
+        var departmentid = company[0].departments.map(
+            function (b) {
+                return b.id;
+            }
+        );
+        console.log("Department id:", departmentid);
+        document.getElementById("p4").innerHTML = departmentid;
+
+        //Displaying Engineering employ names
+        var employname = company[0].departments[0].employees.map(
+            function (c) {
+                return c.name;
+            });
+        console.log("employ Names:", employname);
+        document.getElementById("p5").innerHTML = employname
+
+
+        //Displaying Engineering employ total position
+        var empposition = company[0].departments[0].employees.map(
+            function (d) {
+                return d.position;
+            }
+        );
+        console.log(" Engineering employ total position", empposition)
+        document.getElementById("p6").innerHTML = empposition;
+
+        //Displaying Engineering employ total id's
+        var empid = company[0].departments[0].employees.map(
+            function (e) {
+                return e.id;
+            }
+        )
+        console.log(" Engineering employ total id's", empid);
+        document.getElementById("p7").innerHTML = empid;
+
+        //Displaying Engineering employ salary
+        var empsalary = company[0].departments[0].employees.map(
+            function (f) {
+                return f.salary;
+            }
+        )
+        console.log("Displaying Engineering employ salary", empsalary);
+        document.getElementById("p8").innerHTML = empsalary;
+
+        //Displaying Engineering employ projects
+        var empproject = company[0].departments[0].employees.map(
+            function (g) {
+                return g.projects
+            }
+        );
+        console.log("Displaying Engineering employ project", empproject);
+        document.getElementById("p9").innerHTML = empproject;
+
+
+
+        //Displaying a complany departments of Marketing its name and id
+        var MarketingEmpNameId = company[0].departments[1].employees.map(
+            function (h) {
+                return [h.id, h.name, h.position, h.salary, h.projects, "<br>"];
+            }
+        );
+        console.log("Displaying a complany departments of Marketing its name and id", MarketingEmpNameId);
+        document.getElementById("p10").innerHTML = MarketingEmpNameId;
+
+        //Displaying Engineering a total of  salary 
+        var EmpTotelSel = company[0].departments[0].employees.reduce((acc, val) => acc + val.salary, 0);
+        console.log("Engineering a total of  salary ", EmpTotelSel);
+        document.getElementById("p11").innerHTML = EmpTotelSel;
+
+        //Displaying Marketing a total of  salary 
+        var EmpMarketTotelSel = company[0].departments[1].employees.reduce((acc, val) => acc + val.salary, 0);
+        console.log("Marketing a total of  salary ", EmpMarketTotelSel);
+        document.getElementById("p12").innerHTML = EmpMarketTotelSel;
+
+        //increment Marketing department employ salary in 10000
+        var incrementEmpMar = company[0].departments[1].employees.map((i) => i.salary + 10000)
+        console.log('increment', incrementEmpMar)
+        document.getElementById("p13").innerHTML = incrementEmpMar;
+
+        //total Employ id's 
+        var TotalId = company[0].departments.map(department =>
+            department.employees.map(employee => employee.id)
+        );
+        console.log("Total Employee IDs:", TotalId);
+        document.getElementById("p14").innerHTML = TotalId;
+
+        //total name of Employ 
+        var totalname = company[0].departments.map(
+            function (l) {
+                return l.employees.map(
+                    function (m) {
+                        return m.name
+                    }
+                )
+            }
+        )
+        console.log('name', totalname);
+        document.getElementById("p15").innerHTML = totalname;
+
+
+        //total employ project 
+        var totalpro = company[0].departments.map(
+            function (n) {
+                return n.employees.map(
+                    function (o) {
+                        return o.projects;
+                    }
+                )
+            }
+        )
+        console.log("total employ project ", totalpro);
+        document.getElementById('p16').innerHTML = totalpro;
+
+         
+        //total empoy selary
+        const totalSalary = company[0].departments.reduce(
+            (acc, department) =>
+             {
+                                   const departmentTotal = department.employees.reduce((acc, employee) => { return acc + employee.salary; }, 0);
+                 return acc + departmentTotal;
+             }, 0);
+
+            console.log("Total Salary of all employees:" + totalSalary);
+            document.getElementById("p17").innerHTML=totalSalary
+       
+
+
+        //show the total empoly salray maximum 100000
+         const filteredEmployees = company[0].departments.flatMap(department => department.employees)
+        .filter(employee => employee.salary <= 100000);
+         console.log('cfsdsssf',filteredEmployees)
+        //  document.write(filteredEmployees)
+     
+        //show the data in salary in 
+        var empmax0 = company[0].departments[0].employees.filter(
+            function (p0){
+                return p0.salary>=100000;
+            }
+         )
+         console.log("maxmam",empmax0);
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><pi id="demo"></p>
+    <script>
+        result  = 
+      {
+        Id: "62cb82b136bb23650d33c90",
+        firstname: "Reema",
+        lastname: "Maheta",
+        emailId: "reemamaheta@google.com",
+        birthdate: '29 - 02 - 2002',
+        image: "",
+        city : ['junagdh','rajkot','ahemdabad','keshod','surat'],
+        subjects: {
+            mathematics: 68,
+            science: 84,
+            gujarati: 95,
+            socialscience: 76,
+            english: 85
+        } ,
+        salary : function(){
+            return 50000;
+        },
+
+        fullname: function (){
+            return this.firstname + " " + this.lastname ;
+        }
+    }
+       document.write(result.city);
+       document.write(result.emailId);
+       document.write(result.city[1]);
+       document.write(result.salary());
+       document.write (result.fullname());
+       document.write (result.subjects.gujarati);
+
+
+      
+
+    </script>
+</body>
+</html>
