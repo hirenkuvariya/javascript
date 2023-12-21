@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colour code</title>
+</head>
+<body>
+    <h1>colour code</h1>
+    <form>
+        plese select color : <input type="color" id="a" /><br><br>
+        <input type="button" onClick="myfun()" Value="enter color code" />
+       
+
+        </form>
+        <p>The the code  : <br>
+        <span id = "result"></span>
+        </p>
+        
+</body>
+<script>
+    function myfun() {
+    num1 = document.getElementById("a").value;
+    document.getElementById("result").innerHTML = num1 ;
+}
+</script>
+</html>
