@@ -7,9 +7,10 @@
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, 
 								initial-scale=1"> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"> 
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"> 
 	</script> 
-	<title>india Population Chart</title> 
+	<title>US Population Chart</title> 
 </head> 
 
 <body> 
@@ -21,7 +22,8 @@
 		getData(); 
 
 		async function getData() { 
-			const response = await fetch('  '); 
+			const response = await fetch( 
+'https://datausa.io/api/data?drilldowns=Nation&measures=Population'); 
 			console.log(response); 
 			const data = await response.json(); 
 			console.log(data); 
