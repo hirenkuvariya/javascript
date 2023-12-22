@@ -67,3 +67,6 @@ function deleteinfo(id) {
     // displayinfo();
   
 }
+
+
+
