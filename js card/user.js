@@ -156,3 +156,4 @@ renderData();
 // // Initial check and add listener
 // handleMediaQueryChange();
 // mediaQuery.addListener(handleMediaQueryChange);
+
