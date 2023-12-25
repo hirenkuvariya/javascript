@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time</title>
+</head>
+<body>
+    <h1><p id="pid">click to curretnt date and time</p></h1>
+    <!-- <button type="button" onclick="this.innerHTML=Date()" >click me</button> -->
+       
+
+    <button type="button" id="btn" onclick="displayDate()">click me</button>
+    <script>
+        function displayDate(){
+            document.getElementById("pid").innerHTML=Date();
+        }
+        
+    </script>
+    <p id="pid"></p>
+</body>
+</html>

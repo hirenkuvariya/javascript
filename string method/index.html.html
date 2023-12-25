@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     </head>
+  <body>
+  
+      <h1><span>String Methods</span></h1>
+      
+      <div class="container mt-3">
+        <h2>toLowerCase()</h2>
+        <input type="text" id="lower"/>
+        <p id="demo1"></p>
+        <button type="button" onclick="stringlower()">String Convert Into lowercase</button>
+      </div>
+
+      
+      <div class="container mt-3">
+        <h2 >concat()</h2>
+        <input type="text" id="text1" placeholder="enter value" />
+        <input type="text" id="text2" placeholder="enter value" />
+        <input type="text" id="text_concats" disabled />
+        <button type="button" onclick="text_concat()">Concat</button>
+      </div>
+
+      <script>
+        function stringlower() {
+          var obj = document.getElementById("lower").value;
+          document.getElementById("demo1").innerHTML = obj.toLowerCase();
+        }
+        function text_concat()
+        {
+          var a=document.getElementById("text1").value;
+          var b=document.getElementById("text2").value;
+          var c=a.concat(" ",b);
+          document.getElementById("text_concats").value=c;
+        }
+      </script>
+
+    </div>
+  </body>
+</html>
+

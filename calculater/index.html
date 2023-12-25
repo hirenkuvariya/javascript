@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <title>javascript: calculate two numbers</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            function calc()
+            {
+                var n1 = parseFloat(document.getElementById('n1').value);
+                var n2 = parseFloat(document.getElementById('n2').value);
+                
+                var a = document.getElementById('operators').value;
+                
+                if(a == '+')
+                {
+                    document.getElementById('result').value = n1+n2;
+                }
+                
+                if(a == '-')
+                {
+                    document.getElementById('result').value = n1-n2;
+                }
+                
+                if(a =='*')
+                {
+                    document.getElementById('result').value = n1*n2;
+                }
+                
+                if(a == '/')
+                {
+                    document.getElementById('result').value = n1/n2;
+                }
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+
+
+
+        <input type="text" placeholder=" number" id="n1" checked>
+        <input type="text" placeholder=" number" id="n2" ><br>
+        <select id="operators">
+            <option value="+">addition</option>
+            <option value="-">Subtraction</option>
+            <option value="/">Division</option>
+            <option value="X">Multiplication</option>
+        </select>
+        
+         <button type="button" onclick="calc();" style="background-color: blue; color: white;" >total</button><br>
+         <input type="text" id="result"/>
+    
+    </body>
+</html>
